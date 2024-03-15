@@ -1,23 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import TodoList from './components/TodoList';
+
+const todos = [
+  {
+      id: 1,
+      title : 'Belajar React',
+      description: 'Belajar React Hooks, Components, Props, State, Lifecyle',
+      completed: false
+  },
+  {
+      id: 2,
+      title : 'Membuat Aplikasi React',
+      description: 'Membuat aplikasi 1000 List',
+      completed: true
+  },
+  {
+      id: 3,
+      title : 'Membuat Aplikasi Chat',
+      description: 'Membuat aplikasi Chat menggunakan React dan Firebase',
+      completed: false
+  },
+  {
+      id: 4,
+      title : 'Belajar Node.js',
+      description: 'Belajar membuat server menggunakan Node.js dan Express',
+      completed: false
+  }
+];
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <TodoList list={todos}/>
     </div>
   );
 }
